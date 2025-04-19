@@ -7,23 +7,47 @@
 	font-weight: var(--font-weight-medium);
 	font-size: var(--font-size-m);
 	width: fit-content;
+	height: fit-content;
 	cursor: pointer;
 	color: var(--color-white);
 	gap: var(--spacing-s);
+	padding: 0;
 }
 
 .primary {
 	background-color: var(--color-blue);
 	border-radius: var(--border-radius);
-	padding: var(--spacing-s) var(--spacing-l);
 	color: var(--color-white);
+}
+
+.primary.big {
+	padding: var(--spacing-s) var(--spacing-l);
+}
+
+.primary.medium {
+	padding: var(--spacing-s) var(--spacing-l);
+}
+
+.primary.small {
+	padding: var(--spacing-xs) var(--spacing-s);
 }
 
 .circle {
 	background-color: var(--color-blue-20);
 	border-radius: var(--border-radius-circle);
-	padding: var(--spacing-s);
 	color: var(--color-blue);
+}
+
+.circle.big {
+	padding: var(--spacing-l);
+}
+
+.circle.medium {
+	padding: var(--spacing-s);
+}
+
+.circle.small {
+	padding: var(--spacing-xs);
 }
 
 .icon {

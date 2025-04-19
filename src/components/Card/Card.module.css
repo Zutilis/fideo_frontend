@@ -19,7 +19,8 @@
 
 .title {
 	font-size: var(--font-size-base);
-	font-weight: var(--font-weight-semibold);
+	font-weight: var(--font-weight-medium);
+	/* color: var(--color-blue); */
 }
 
 .subTitle {

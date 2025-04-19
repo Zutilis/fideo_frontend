@@ -1,0 +1,45 @@
+.section-scrollable-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-m);
+}
+
+.scrollable-list-header {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-s);
+	padding-inline: var(--padding-page-x);
+}
+
+.scrollable-card-container {
+	display: flex;
+	gap: var(--spacing-s);
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+	padding-inline: var(--padding-page-x);
+	scroll-padding-inline: var(--padding-page-x);
+}
+
+.scrollable-card-container::-webkit-scrollbar {
+	display: none;
+}
+
+.scrollable-card-container > * {
+	flex: 0 0 auto;
+	width: calc(50% - var(--spacing-s));
+	scroll-snap-align: start;
+}
+
+/* @media (min-width: 1024px) {
+	.scrollable-card-container {
+		overflow-x: visible;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	.scrollable-card-container > * {
+		width: calc((100% - var(--spacing-m) * 2) / 3);
+		max-width: 300px;
+	}
+} */

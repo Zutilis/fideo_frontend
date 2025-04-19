@@ -9,10 +9,10 @@
 	--font-weight-bold: 700;
 
 	/* Font sizes */
-	--font-size-s: 0.75rem;
-	--font-size-m: 0.875rem;
-	--font-size-base: 1rem;
-	--font-size-l: 1.3rem;
+	--font-size-s: .55rem;
+	--font-size-m: .75rem;
+	--font-size-base: .85rem;
+	--font-size-l: 1.1rem;
 	--font-size-xl: 1.6rem;
 
 	/* Colors */
@@ -22,10 +22,15 @@
 	--color-white: rgb(255, 255, 255, 1);
 
 	/* Spacings */
+	--spacing-xs: .35rem;
 	--spacing-s: .75rem;
 	--spacing-m: 1rem;
 	--spacing-l: 1.25rem;
-	--spacing-xl: 3rem;
+	--spacing-xl: 2.5rem;
+
+	/* Paddings */
+	--padding-page-x: 1rem;
+	/* --padding-page-y: 1rem; */
 
 	/* Borders */
 	--border-radius: 15px;
@@ -48,9 +53,7 @@
 
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
+	font-family: --apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -89,4 +92,20 @@ h3 {
 .border {
 	border: 1px solid var(--color-blue-20);
 	border-radius: var(--border-radius);
+}
+
+.center {
+	display: flex;
+	align-items: center;
+}
+
+.inline-flex {
+	display: inline-flex;
+	gap: var(--spacing-s);	
+}
+
+.column-flex {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-m);	
 }
