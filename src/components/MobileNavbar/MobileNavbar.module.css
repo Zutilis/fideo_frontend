@@ -3,12 +3,13 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: var(--navbar-height);
+	height: calc(var(--navbar-height) - 10px);
 	background-color: var(--color-white);
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	border-top: 1px solid var(--color-light-grey);
+	padding-bottom: 10px;
 	z-index: 100;
 }
 

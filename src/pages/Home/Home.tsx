@@ -42,7 +42,7 @@ const Home: React.FC = () => {
 					day={10} month={2} hour={15} minute={26}
 				/>
 			</ScrollableCardList>
-			<ScrollableCardList title={'Commerces près de chez vous'}>
+			<ScrollableCardList title={'Commerces à proximité'}>
 				<NearbyBusinessCard
 					name={'Jazz Barber'}
 					image={'assets/business/1/avatar.webp'}

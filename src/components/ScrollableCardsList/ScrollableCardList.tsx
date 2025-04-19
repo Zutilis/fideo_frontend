@@ -17,7 +17,7 @@ const ScrollableCardList: React.FC<ScrollableCardListProps> = ({ title, children
     <section className={clsx(styles['section-scrollable-list'], className)}>
       <div className={styles['scrollable-list-header']}>
         <h3>{title}</h3>
-        <Button iconLeft={<ArrowRight width={15} height={15}/>} variant='circle' size='small' />
+        <Button iconLeft={<ArrowRight width={20} height={20}/>} variant='circle' size='small' />
       </div>
       <div className={clsx(styles['scrollable-card-container'])}>
         {children}

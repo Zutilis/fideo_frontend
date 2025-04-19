@@ -9,10 +9,10 @@
 	--font-weight-bold: 700;
 
 	/* Font sizes */
-	--font-size-s: .55rem;
-	--font-size-m: .75rem;
-	--font-size-base: .85rem;
-	--font-size-l: 1.1rem;
+	--font-size-s: .75rem;
+	--font-size-m: .875rem;
+	--font-size-base: 1rem;
+	--font-size-l: 1.3rem;
 	--font-size-xl: 1.6rem;
 
 	/* Colors */
@@ -33,7 +33,7 @@
 	--padding-page-y: 2rem;
 
 	/* Navbar */
-	--navbar-height: 70px;
+	--navbar-height: 80px;
 
 	/* Borders */
 	--border-radius: 15px;

@@ -3,13 +3,15 @@
 	flex-direction: column;
 	box-sizing: border-box;
 	gap: var(--spacing-s);
-	max-width: min(50%, 250px);
+	/* max-width: min(50%, 250px); */
 	padding: var(--spacing-s);
 }
 
 .card img {
 	border-radius: var(--border-radius);
-	object-fit: contain;
+	object-fit: cover;
+	max-height: 150px;
+	width: 100%;
 }
 
 .description {

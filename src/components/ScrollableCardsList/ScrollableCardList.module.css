@@ -7,6 +7,7 @@
 .scrollable-list-header {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	gap: var(--spacing-s);
 	padding-inline: var(--padding-page-x);
 }
@@ -27,7 +28,7 @@
 
 .scrollable-card-container > * {
 	flex: 0 0 auto;
-	width: calc(50% - var(--spacing-s));
+	width: calc(75% - var(--spacing-s));
 	scroll-snap-align: start;
 }
 
