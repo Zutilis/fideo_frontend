@@ -17,7 +17,7 @@
 
 	/* Colors */
 	--color-blue: rgb(17, 23, 41, 1);
-	--color-blue-20: rgb(17, 23, 41, .2);
+	--color-light-grey: rgb(17, 23, 41, .2);
 	--color-grey: rgb(17, 23, 41, .8);
 	--color-white: rgb(255, 255, 255, 1);
 
@@ -99,8 +99,14 @@ h3 {
 	font-weight: var(--font-weight-semibold);
 }
 
+img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+
 .border {
-	border: 1px solid var(--color-blue-20);
+	border: 1px solid var(--color-light-grey);
 	border-radius: var(--border-radius);
 }
 
@@ -140,7 +146,7 @@ h3 {
 }
 
 .circle {
-	background-color: var(--color-blue-20);
+	background-color: var(--color-light-grey);
 	border-radius: var(--border-radius-circle);
 	color: var(--color-blue);
 	padding: 0;

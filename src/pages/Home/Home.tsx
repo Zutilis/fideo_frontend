@@ -1,8 +1,6 @@
 import React from 'react';
-import clsx from 'clsx';
 
 import './Home.module.css';
-import { ArrowRight } from 'lucide-react';
 
 import Button from '../../components/Button/Button';
 import AppointmentCard from '../../components/AppointmentCard/AppointmentCard';
@@ -16,7 +14,7 @@ const Home: React.FC = () => {
 		<div id='app'>
 			<Header>
 				<h1>Bonjour, Jules</h1>
-				<Button iconLeft={<ArrowRight width={15} height={15}/>} variant='circle' size='medium' />
+				<Button iconLeft={'assets/user/1/avatar.jpg'} variant='circle'/>
 			</Header>
 			<ScrollableCardList title={'Mes rendez-vous'}>
 				<AppointmentCard

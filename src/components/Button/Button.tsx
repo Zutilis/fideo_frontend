@@ -20,14 +20,22 @@ const Button: React.FC<ButtonProps> = ({
   iconLeft,
   iconRight,
   variant = 'primary',
-  size = 'medium',
+  size,
 }) => {
   return (
     <button
       className={clsx(styles.button, variant, size)}
       onClick={onClick}
     >
-      {iconLeft && <span className={clsx(styles.icon)}>{iconLeft}</span>}
+      {typeof iconLeft === 'string' ? (
+        <img
+          src={iconLeft}
+          alt=""
+          className={clsx(styles.avatar)}
+        />
+      ) : (
+        <span className={clsx(styles.icon)}>{iconLeft}</span>
+      )}
       {text && <span>{text}</span>}
       {iconRight && <span className={clsx(styles.icon)}>{iconRight}</span>}
     </button>

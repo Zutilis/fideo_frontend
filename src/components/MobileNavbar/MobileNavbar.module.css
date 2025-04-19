@@ -8,7 +8,7 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	border-top: 1px solid var(--color-blue-20);
+	border-top: 1px solid var(--color-light-grey);
 	z-index: 100;
 }
 
@@ -29,10 +29,6 @@
 
 .navItem .icon {
 	font-size: 1.5rem;
-}
-
-.navItem .label {
-	margin-top: 4px;
 }
 
 .active {
