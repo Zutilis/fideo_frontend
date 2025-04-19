@@ -9,11 +9,15 @@ import AppointmentCard from '../../components/AppointmentCard/AppointmentCard';
 import NearbyBusinessCard from '../../components/NearbyBusinessCard/NearbyBusinessCard';
 import FavoriteBusinessCard from '../../components/FavoriteBusinessCard/FavoriteBusinessCard';
 import ScrollableCardList from '../../components/ScrollableCardsList/ScrollableCardList';
+import Header from '../../components/Header/Header';
 
 const Home: React.FC = () => {
 	return (
 		<div id='app'>
-			<h1>Bonjour, Jules</h1>
+			<Header>
+				<h1>Bonjour, Jules</h1>
+				<Button iconLeft={<ArrowRight width={15} height={15}/>} variant='circle' size='medium' />
+			</Header>
 			<ScrollableCardList title={'Mes rendez-vous'}>
 				<AppointmentCard
 					name={'Jazz Barber'}

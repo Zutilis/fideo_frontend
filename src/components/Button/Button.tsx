@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={clsx(styles.button, styles[variant], styles[size])}
+      className={clsx(styles.button, variant, size)}
       onClick={onClick}
     >
       {iconLeft && <span className={clsx(styles.icon)}>{iconLeft}</span>}

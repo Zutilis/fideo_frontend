@@ -30,7 +30,10 @@
 
 	/* Paddings */
 	--padding-page-x: 1rem;
-	/* --padding-page-y: 1rem; */
+	--padding-page-y: 2rem;
+
+	/* Navbar */
+	--navbar-height: 70px;
 
 	/* Borders */
 	--border-radius: 15px;
@@ -49,6 +52,13 @@
 	:root {
 
 	}
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	padding: calc(var(--padding-page-y) * 1.25) 0 var(--padding-page-y) 0;
+	gap: var(--spacing-xl);
 }
 
 body {
@@ -108,4 +118,42 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-m);	
+}
+
+.primary {
+	background-color: var(--color-blue);
+	border-radius: var(--border-radius);
+	color: var(--color-white);
+	padding: 0;
+}
+
+.primary.big {
+	padding: var(--spacing-s) var(--spacing-l);
+}
+
+.primary.medium {
+	padding: var(--spacing-s) var(--spacing-l);
+}
+
+.primary.small {
+	padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.circle {
+	background-color: var(--color-blue-20);
+	border-radius: var(--border-radius-circle);
+	color: var(--color-blue);
+	padding: 0;
+}
+
+.circle.big {
+	padding: var(--spacing-l);
+}
+
+.circle.medium {
+	padding: var(--spacing-s);
+}
+
+.circle.small {
+	padding: var(--spacing-xs);
 }
