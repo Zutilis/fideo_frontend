@@ -1,0 +1,23 @@
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--spacing-xs) 0;
+	cursor: default;
+}
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.label {
+	font-weight: var(--font-weight-medium);
+	font-size: var(--font-size-m);;
+}
+
+.value {
+	font-size: var(--font-size-m);
+	font-weight: var(--font-weight-regular);
+	color: var(--color-grey);
+}

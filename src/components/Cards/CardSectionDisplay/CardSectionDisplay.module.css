@@ -1,3 +1,55 @@
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-m);
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--spacing-s);
+	padding-inline: var(--padding-page-x);
+}
+
+.cardContainer {
+	display: flex;
+	gap: var(--spacing-s);
+	padding-inline: var(--padding-page-x);
+}
+
+/* Slider mode (horizontal scroll) */
+.slider {
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-padding-inline: var(--padding-page-x);
+	scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider>* {
+	flex: 0 0 auto;
+	width: calc(75% - var(--spacing-s));
+	scroll-snap-align: start;
+}
+
+/* Wrap mode (grid-like) */
+.wrap {
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.wrap>* {
+	width: calc((100% - var(--spacing-m)) / 2);
+	max-width: 300px;
+}
+
+
+
+
 .section-scrollable-list {
 	display: flex;
 	flex-direction: column;

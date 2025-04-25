@@ -17,8 +17,8 @@
 
 	/* Colors */
 	--color-blue: rgb(17, 23, 41, 1);
-	--color-light-grey: rgb(17, 23, 41, .2);
 	--color-grey: rgb(17, 23, 41, .8);
+	--color-light-grey: rgb(17, 23, 41, .2);
 	--color-white: rgb(255, 255, 255, 1);
 
 	/* Spacings */
@@ -30,7 +30,7 @@
 
 	/* Paddings */
 	--padding-page-x: 1rem;
-	--padding-page-y: 2rem;
+	--padding-page-y: 1.5rem;
 
 	/* Navbar */
 	--navbar-height: 80px;
@@ -64,6 +64,7 @@
 body {
 	margin: 0;
 	font-family: --apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+	font-size: var(--font-size-base);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

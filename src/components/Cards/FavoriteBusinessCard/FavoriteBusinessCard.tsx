@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../Card/Card';
-import { formatDetails } from '../../utils/utils';
+import Card from '../../Cards/Card/Card';
+import { formatDetails } from '../../../utils/utils';
 
 interface FavoriteBusinessProps {
   name: string;

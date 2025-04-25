@@ -3,10 +3,10 @@ import React from 'react';
 import './Home.module.css';
 
 import Button from '../../components/Button/Button';
-import AppointmentCard from '../../components/AppointmentCard/AppointmentCard';
-import NearbyBusinessCard from '../../components/NearbyBusinessCard/NearbyBusinessCard';
-import FavoriteBusinessCard from '../../components/FavoriteBusinessCard/FavoriteBusinessCard';
-import ScrollableCardList from '../../components/ScrollableCardsList/ScrollableCardList';
+import AppointmentCard from '../../components/Cards/AppointmentCard/AppointmentCard';
+import NearbyBusinessCard from '../../components/Cards/NearbyBusinessCard/NearbyBusinessCard';
+import FavoriteBusinessCard from '../../components/Cards/FavoriteBusinessCard/FavoriteBusinessCard';
+import CardSectionDisplay from '../../components/Cards/CardSectionDisplay/CardSectionDisplay';
 import Header from '../../components/Header/Header';
 
 const Home: React.FC = () => {
@@ -14,9 +14,9 @@ const Home: React.FC = () => {
 		<div id='app'>
 			<Header>
 				<h1>Bonjour, Jules</h1>
-				<Button iconLeft={'assets/user/1/avatar.jpg'} variant='circle'/>
+				<Button iconLeft={'assets/user/1/avatar.jpg'} variant='circle' navigateTo='/account'/>
 			</Header>
-			<ScrollableCardList title={'Mes rendez-vous'}>
+			<CardSectionDisplay title={'Mes rendez-vous'} navigateTo='/appointments'>
 				<AppointmentCard
 					name={'Jazz Barber'}
 					image={'assets/business/1/avatar.webp'}
@@ -41,8 +41,8 @@ const Home: React.FC = () => {
 					price={15}
 					day={10} month={2} hour={15} minute={26}
 				/>
-			</ScrollableCardList>
-			<ScrollableCardList title={'Commerces à proximité'}>
+			</CardSectionDisplay>
+			<CardSectionDisplay title={'Commerces à proximité'} navigateTo='/nearby-businesses'>
 				<NearbyBusinessCard
 					name={'Jazz Barber'}
 					image={'assets/business/1/avatar.webp'}
@@ -61,8 +61,8 @@ const Home: React.FC = () => {
 					rating={4.6}
 					reviewCount={99}
 				/>
-			</ScrollableCardList>
-			<ScrollableCardList title={'Vos commerces favoris'}>
+			</CardSectionDisplay>
+			<CardSectionDisplay title={'Vos commerces favoris'} navigateTo='/favorites'>
 				<FavoriteBusinessCard
 					name={'Jazz Barber'}
 					image={'assets/business/1/avatar.webp'}
@@ -87,7 +87,7 @@ const Home: React.FC = () => {
 					rating={4.6}
 					reviewCount={99}
 				/>
-			</ScrollableCardList>
+			</CardSectionDisplay>
 		</div>
 	);
 };
