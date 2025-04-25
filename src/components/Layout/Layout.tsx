@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children, showNavbar = true }) => {
 		{ label: 'Accueil', icon: <Home />, isActive: location.pathname === '/', onClick: () => navigate('/') },
 		{ label: 'Parcourir', icon: <Search />, isActive: location.pathname === '/browse', onClick: () => navigate('/browse') },
 		{ label: 'Réservations', icon: <FileText />, isActive: location.pathname === '/reservations', onClick: () => navigate('/reservations') },
-		{ label: 'Compte', icon: <User />, isActive: location.pathname === '/account', onClick: () => navigate('/account') },
+		{ label: 'Compte', icon: <User />, isActive: location.pathname === '/profile', onClick: () => navigate('/profile') },
 	];
 
 	return (

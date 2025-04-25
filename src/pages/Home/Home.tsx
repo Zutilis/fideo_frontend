@@ -14,7 +14,7 @@ const Home: React.FC = () => {
 		<div id='app'>
 			<Header>
 				<h1>Bonjour, Jules</h1>
-				<Button iconLeft={'assets/user/1/avatar.jpg'} variant='circle' navigateTo='/account'/>
+				<Button iconLeft={'assets/user/1/avatar.jpg'} variant='circle' navigateTo='/profile'/>
 			</Header>
 			<CardSectionDisplay title={'Mes rendez-vous'} navigateTo='/appointments'>
 				<AppointmentCard

@@ -1,18 +1,18 @@
 import React from 'react';
 
-import styles from './Account.module.css';
+import styles from './Profile.module.css';
 
 import Button from '../../components/Button/Button';
 import Header from '../../components/Header/Header';
 import ProfileSection from '../../components/Profile/ProfileSection/ProfileSection';
 import ProfileItemRow from '../../components/Profile/ProfileItemRow/ProfilItemRow';
 
-const Account: React.FC = () => {
+const Profile: React.FC = () => {
 	return (
 		<div id='app'>
 			<Header>
 				<h1>Jules Ducrot</h1>
-				<Button iconLeft={'assets/user/1/avatar.jpg'} variant='circle' navigateTo='/account'/>
+				<Button iconLeft={'assets/user/1/avatar.jpg'} variant='circle' navigateTo='/profile'/>
 			</Header>
 			<div className={styles.section}>
 				<ProfileSection title={'Informations Personelles'}>
@@ -23,7 +23,7 @@ const Account: React.FC = () => {
 				<ProfileSection title={'Sécurité'}>
 					<ProfileItemRow label={"Mot de passe"}/>
 					<ProfileItemRow label={"Suppression du compte"}/>
-					<ProfileItemRow label={"Se déconnecter"}/>
+					<ProfileItemRow label={"Se déconnecter"} color='red'/>
 				</ProfileSection>
 				<ProfileSection title={'A propos'}>
 					<ProfileItemRow label={"Mentions Légales"}/>
@@ -33,4 +33,4 @@ const Account: React.FC = () => {
 	);
 };
 
-export default Account;
+export default Profile;

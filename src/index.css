@@ -20,6 +20,7 @@
 	--color-grey: rgb(17, 23, 41, .8);
 	--color-light-grey: rgb(17, 23, 41, .2);
 	--color-white: rgb(255, 255, 255, 1);
+	--color-red: rgb(215, 38, 56, 1);
 
 	/* Spacings */
 	--spacing-xs: .35rem;
@@ -98,6 +99,14 @@ h2 {
 h3 {
 	font-size: var(--font-size-l);
 	font-weight: var(--font-weight-semibold);
+}
+
+.c-blue {
+	color: var(--color-blue);
+}
+
+.c-red {
+	color: var(--color-red);
 }
 
 img {
