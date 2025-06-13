@@ -42,7 +42,7 @@ const Home: React.FC = () => {
 					day={10} month={2} hour={15} minute={26}
 				/>
 			</CardSectionDisplay>
-			<CardSectionDisplay title={'Commerces à proximité'} navigateTo='/nearby-businesses'>
+			<CardSectionDisplay title={'Commerces à proximité'} navigateTo='/nearby'>
 				<NearbyBusinessCard
 					name={'Jazz Barber'}
 					image={'assets/business/1/avatar.webp'}

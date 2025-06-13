@@ -41,25 +41,14 @@
 	--border-radius-circle: 50%;
 }
 
-/* Tablet (≥ 768px) */
-@media (min-width: 768px) {
-	:root {
-
-	}
-}
-
-/* Desktop (≥ 1024px) */
-@media (min-width: 1024px) {
-	:root {
-
-	}
-}
-
 #app {
 	display: flex;
 	flex-direction: column;
-	padding: calc(var(--padding-page-y) * 1.25) 0 var(--padding-page-y) 0;
 	gap: var(--spacing-xl);
+}
+
+#app:not(.nomargin) {
+	padding: calc(var(--padding-page-y) * 1.25) 0 var(--padding-page-y) 0;
 }
 
 body {
