@@ -1,0 +1,41 @@
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: calc(100vh - var(--padding-page-y));
+	flex-direction: column;
+	gap: var(--spacing-xl);
+	padding-inline: var(--padding-page-x);
+}
+
+.form .inputsWrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: var(--spacing-l);
+}
+
+.form .inputWrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: var(--spacing-xs);
+}
+
+.form input {
+	padding: 1rem .75rem;
+	width: 100%;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: .75rem;
+	background-color: var(--color-blue);
+	color: var(--color-white);
+	border: none;
+	border-radius: var(--border-radius-button);
+}

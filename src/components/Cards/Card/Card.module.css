@@ -1,6 +1,5 @@
 .card {
 	display: flex;
-	box-sizing: border-box;
 	gap: var(--spacing-s);
 	padding: var(--spacing-s);
 }

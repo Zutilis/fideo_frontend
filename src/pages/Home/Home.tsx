@@ -8,12 +8,15 @@ import NearbyBusinessCard from '../../components/Cards/NearbyBusinessCard/Nearby
 import FavoriteBusinessCard from '../../components/Cards/FavoriteBusinessCard/FavoriteBusinessCard';
 import CardSectionDisplay from '../../components/Cards/CardSectionDisplay/CardSectionDisplay';
 import Header from '../../components/Header/Header';
+import { useAuth } from '../../context/AuthContext';
 
 const Home: React.FC = () => {
+	const { user } = useAuth();
+
 	return (
 		<div id='app'>
 			<Header>
-				<h1>Bonjour, Jules</h1>
+				<h1>Bonjour, {user?.FirstName}</h1>
 				<Button iconLeft={'assets/user/1/avatar.jpg'} variant='circle' navigateTo='/profile'/>
 			</Header>
 			<CardSectionDisplay title={'Mes rendez-vous'} navigateTo='/appointments'>
