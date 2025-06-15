@@ -11,6 +11,7 @@ interface CardSectionDisplayProps {
   className?: string;
   showButton?: boolean;
   mode?: 'slider' | 'wrap';
+  itemsPerRow?: number;
 }
 
 const CardSectionDisplay: React.FC<CardSectionDisplayProps> = ({
@@ -20,6 +21,7 @@ const CardSectionDisplay: React.FC<CardSectionDisplayProps> = ({
   className,
   showButton = true,
   mode = 'slider',
+  itemsPerRow = 2,
 }) => {
   return (
     <section className={clsx(styles.section, className)}>
@@ -38,7 +40,9 @@ const CardSectionDisplay: React.FC<CardSectionDisplayProps> = ({
       <div
         className={clsx(
           styles.cardContainer,
-          mode === 'slider' ? styles.slider : styles.wrap
+          mode === 'slider' ? styles.slider : styles.wrap,
+          mode === 'slider' && itemsPerRow && styles[`slider${itemsPerRow}`],
+          mode === 'wrap' && itemsPerRow && styles[`wrap${itemsPerRow}`]
         )}
       >
         {children}

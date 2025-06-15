@@ -3,12 +3,10 @@ import clsx from 'clsx';
 import styles from './ProfileItemRow.module.css';
 import { ChevronRight } from 'lucide-react';
 
-type ColorVariant = 'blue' | 'red';
-
 interface ProfileItemRowProps {
 	label: string;
 	value?: string;
-	color?: ColorVariant;
+	color?: 'blue' | 'red';
 	onClick?: () => void;
 }
 
@@ -24,8 +22,8 @@ const ProfileItemRow: React.FC<ProfileItemRowProps> = ({
 			onClick={onClick}
 		>
 			<div className={styles.textContainer}>
-				<p className={styles.label}>{label}</p>
-				{value && <p className={styles.value}>{value}</p>}
+				<p className='subTitle'>{label}</p>
+				{value && <p className='summary'>{value}</p>}
 			</div>
 			<ChevronRight size={16} color={`var(--color-${color})`} />
 		</div>

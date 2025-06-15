@@ -1,10 +1,17 @@
 .card {
 	display: flex;
-	flex-direction: column;
 	box-sizing: border-box;
 	gap: var(--spacing-s);
-	/* max-width: min(50%, 250px); */
 	padding: var(--spacing-s);
+}
+
+.column {
+  	flex-direction: column;
+}
+
+.row {
+	flex-direction: row;
+	align-items: center;
 }
 
 .card img {
@@ -14,24 +21,16 @@
 	width: 100%;
 }
 
+.card.row img {
+	max-width: 115px;
+	height: 100%;
+}
+
 .description {
 	display: flex;
 	flex-direction: column;
 }
 
-.title {
-	font-size: var(--font-size-base);
-	font-weight: var(--font-weight-medium);
-	/* color: var(--color-blue); */
-}
-
-.subTitle {
-	font-size: var(--font-size-m);
-	font-weight: var(--font-weight-medium);
-}
-
-.summary {
-	font-size: var(--font-size-m);
-	font-weight: var(--font-weight-regular);
-	color: var(--color-grey);
+.bottomButton {
+	margin-top: var(--spacing-l);
 }

@@ -21,6 +21,7 @@
 	--color-light-grey: rgb(17, 23, 41, .2);
 	--color-white: rgb(255, 255, 255, 1);
 	--color-red: rgb(215, 38, 56, 1);
+	--color-yellow: rgb(255, 181, 62, 1);
 
 	/* Spacings */
 	--spacing-xs: .35rem;
@@ -38,6 +39,7 @@
 
 	/* Borders */
 	--border-radius: 15px;
+	--border-radius-button: 10px;
 	--border-radius-circle: 50%;
 }
 
@@ -45,10 +47,17 @@
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-xl);
+	padding-bottom: var(--padding-page-y);
 }
 
 #app:not(.nomargin) {
-	padding: calc(var(--padding-page-y) * 1.25) 0 var(--padding-page-y) 0;
+	padding-top: calc(var(--padding-page-y) * 1.25 + var(--navbar-height));
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -64,17 +73,6 @@ code {
 		monospace;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a {
-	margin: 0;
-}
-
 h1 {
 	font-size: var(--font-size-xl);
 	font-weight: var(--font-weight-bold);
@@ -88,6 +86,22 @@ h2 {
 h3 {
 	font-size: var(--font-size-l);
 	font-weight: var(--font-weight-semibold);
+}
+
+.title {
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-medium);
+}
+
+.subTitle {
+	font-size: var(--font-size-m);
+	font-weight: var(--font-weight-medium);
+}
+
+.summary {
+	font-size: var(--font-size-m);
+	font-weight: var(--font-weight-regular);
+	color: var(--color-grey);
 }
 
 .c-blue {

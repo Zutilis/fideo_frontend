@@ -8,6 +8,7 @@ interface CardProps {
   subTitle?: string;
   summary?: string;
   bottomButton?: React.ReactNode;
+  direction?: 'column' | 'row';
   onClick?: () => void;
 }
 
@@ -17,20 +18,24 @@ const Card: React.FC<CardProps> = ({
   subTitle,
   summary,
   bottomButton,
+  direction = 'column',
   onClick,
 }) => {
   return (
     <div
-      className={clsx(styles.card, 'border')}
+      className={clsx(styles.card, 'border', {
+        [styles.row]: direction === 'row',
+        [styles.column]: direction === 'column',
+      })}
       onClick={onClick}
     >
       {image && <img src={image}/>}
       <div className={clsx(styles.description)}>
-        {title && <p className={styles.title}>{title}</p>}
-        {subTitle && <p className={styles.subTitle}>{subTitle}</p>}
-        {summary && <p className={styles.summary}>{summary}</p>}
+        {title && <p className='title'>{title}</p>}
+        {subTitle && <p className='subTitle'>{subTitle}</p>}
+        {summary && <p className='summary'>{summary}</p>}
+        {bottomButton && <div className={styles.bottomButton}>{bottomButton}</div>}
       </div>
-      {bottomButton && <span className={styles.bottomButton}>{bottomButton}</span>}
     </div>
   );
 };

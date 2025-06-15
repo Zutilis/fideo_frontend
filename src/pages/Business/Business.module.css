@@ -1,0 +1,26 @@
+.descriptionSection {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-l);
+}
+
+.avatar {
+	height: 40vh;
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+	object-fit: cover;
+}
+
+.descriptionWrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: var(--padding-page-x);
+}
+
+.userPoints {
+	background-color: var(--color-yellow);
+	padding: .5rem;
+	border-radius: var(--border-radius);
+	height: fit-content;
+}
