@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import Button from '../../Button/Button';
 
 interface CardSectionDisplayProps {
-  title: string;
+  title?: string;
   navigateTo?: string;
   children: React.ReactNode;
   className?: string;
@@ -25,17 +25,19 @@ const CardSectionDisplay: React.FC<CardSectionDisplayProps> = ({
 }) => {
   return (
     <section className={clsx(styles.section, className)}>
-      <div className={styles.header}>
-        <h3>{title}</h3>
-        {showButton && navigateTo && (
-          <Button
-            iconLeft={<ArrowRight width={20} height={20} />}
-            variant="circle"
-            size="small"
-            navigateTo={navigateTo}
-          />
-        )}
-      </div>
+      {title && (
+        <div className={styles.header}>
+          <h3>{title}</h3>
+          {showButton && navigateTo && (
+            <Button
+              iconLeft={<ArrowRight width={20} height={20} />}
+              variant="circle"
+              size="small"
+              navigateTo={navigateTo}
+            />
+          )}
+        </div>
+      )}
 
       <div
         className={clsx(

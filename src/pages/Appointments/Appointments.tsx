@@ -12,20 +12,15 @@ const Appointments: React.FC = () => {
 	return (
 		<div id='app'>
 			<Header>
-				<Button
-					iconLeft={<ArrowLeft width={20} height={20} />}
-					variant='circle'
-					size='small'
-					navigateTo='back'
-				/>
+				<h1>Mes rendez-vous</h1>
 				<Button
 					iconLeft={<Archive width={20} height={20} />}
 					variant='circle'
-					size='small'
+					size='medium'
 					navigateTo='/appointments/history'
 				/>
 			</Header>
-			<CardSectionDisplay title={'Mes rendez-vous'} mode='wrap'>
+			<CardSectionDisplay mode='wrap'>
 				<AppointmentCard
 					name={'Jazz Barber'}
 					image={'assets/business/1/avatar.webp'}

@@ -15,7 +15,7 @@ const Favorites: React.FC = () => {
 				<Button
 					iconLeft={<ArrowLeft width={20} height={20} />}
 					variant='circle'
-					size='small'
+					size='medium'
 					navigateTo='back'
 				/>
 				<></>

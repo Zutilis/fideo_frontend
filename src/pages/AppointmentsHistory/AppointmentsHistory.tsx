@@ -15,12 +15,12 @@ const AppointmentsHistory: React.FC = () => {
 				<Button
 					iconLeft={<ArrowLeft width={20} height={20} />}
 					variant='circle'
-					size='small'
+					size='medium'
 					navigateTo='back'
 				/>
-				<></>
+				<h1>Rendez-vous passés</h1>
 			</Header>
-			<CardSectionDisplay title={'Mes rendez-vous passés'} mode='wrap'>
+			<CardSectionDisplay mode='wrap'>
 				<AppointmentCard
 					name={'Jazz Barber'}
 					image={'../assets/business/1/avatar.webp'}

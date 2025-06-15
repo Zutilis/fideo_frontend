@@ -9,7 +9,7 @@
 	height: var(--navbar-height);
 	width: 100%;
 	overflow: hidden;
-	padding: var(--padding-page-x) var(--padding-page-y);
+	padding: var(--padding-page-y) var(--padding-page-x);
 	background-color: var(--color-white);
 }
 
