@@ -68,33 +68,6 @@ const Business: React.FC = () => {
 					</div>
 				</div>
 			</section>
-
-			{!isOwner ? (
-				<CardSectionDisplay title={'Offres de fidélité'} mode='wrap' itemsPerRow={1}>
-					{offers.map((offer, index) => (
-						<LoyaltyOfferCard
-							key={index}
-							image={'../assets/business/1/avatar.webp'}
-							service={offer.name}
-							duration={offer.duration}
-							description={offer.description}
-							rating={4.5}
-							reviewCount={101}
-							pricePoints={20}
-						/>
-					))}
-				</CardSectionDisplay>
-			) : (
-				<div className={styles.addOfferContainer}>
-					<button
-						className={styles.addOfferButton}
-						onClick={() => navigate(`/business/${businessId}/offers/create`)}
-					>
-						Ajouter une offre
-					</button>
-				</div>
-			)}
-
 			<CardSectionDisplay 
 				title={'Toutes les offres'} mode='wrap' 
 				className={isOwner ? styles.offers : undefined}
@@ -112,6 +85,17 @@ const Business: React.FC = () => {
 					/>
 				))}
 			</CardSectionDisplay>
+			
+			{isOwner && (
+				<div className={styles.addOfferContainer}>
+					<button
+						className={styles.addOfferButton}
+						onClick={() => navigate(`/business/${businessId}/offers/create`)}
+					>
+						Ajouter une offre
+					</button>
+				</div>
+			)}
 		</div>
 	);
 };
