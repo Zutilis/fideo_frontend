@@ -12,7 +12,7 @@ const Appointments: React.FC = () => {
 	return (
 		<div id='app'>
 			<Header>
-				<h1>Mes rendez-vous</h1>
+				<h1>Mes réservations</h1>
 				<Button
 					iconLeft={<Archive width={20} height={20} />}
 					variant='circle'

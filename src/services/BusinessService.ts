@@ -27,6 +27,18 @@ export const createBusiness = async (data: BusinessCreateData) => {
 	return response.data;
 };
 
+export const getBusinesses = async () => {
+	const token = localStorage.getItem('token');
+
+	const response = await axios.get(`${API_URL}/businesses`, {
+		headers: {
+			Authorization: `Bearer ${token}`,
+		},
+	});
+
+	return response.data;
+};
+
 export const getBusiness = async (id: number) => {
 	const token = localStorage.getItem('token');
 
@@ -41,7 +53,6 @@ export const getBusiness = async (id: number) => {
 
 export const getBusinessByUser = async (user_id: string) => {
 	const token = localStorage.getItem('token');
-	console.log(token);
 
 	const response = await axios.get(`${API_URL}/businesses/me`, {
 		headers: {

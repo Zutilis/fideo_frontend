@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children, showNavbar = true }) => {
 			onClick: () => navigate('/my-businesses')
 		},
 		{ 
-			label: 'Mes Rendez-vous', icon: <FileText />, 
+			label: 'Mes Réservations', icon: <FileText />, 
 			isActive: location.pathname === '/appointments', 
 			onClick: () => navigate('/appointments') 
 		},

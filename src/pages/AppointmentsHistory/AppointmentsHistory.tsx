@@ -18,7 +18,7 @@ const AppointmentsHistory: React.FC = () => {
 					size='medium'
 					navigateTo='back'
 				/>
-				<h1>Rendez-vous passés</h1>
+				<h1>Réservations passées</h1>
 			</Header>
 			<CardSectionDisplay mode='wrap'>
 				<AppointmentCard

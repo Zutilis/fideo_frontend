@@ -9,7 +9,7 @@ export interface OfferCreateData {
 	Duration: number;
 }
 
-export const createOffer = async (businessId: number, data: OfferCreateData) => {
+export const create = async (businessId: number, data: OfferCreateData) => {
 	const token = localStorage.getItem('token');
 
 	const response = await axios.post(
