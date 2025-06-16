@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
 
 interface JwtPayload {
+	Id: string;
 	Email: string;
 	FirstName: string;
 	LastName: string;
@@ -18,6 +19,7 @@ const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [user, setUser] = useState<JwtPayload | null>(null);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		const token = localStorage.getItem('token');
@@ -29,6 +31,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 				setUser(null);
 			}
 		}
+		setLoading(false);
 	}, []);
 
 	const login = (token: string) => {
@@ -42,6 +45,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 		localStorage.removeItem('token');
 		setUser(null);
 	};
+
+	if (loading) return <div>Chargement...</div>; // ou un vrai spinner
 
 	return (
 		<AuthContext.Provider value={{ user, isAuthenticated: !!user, login, logout }}>

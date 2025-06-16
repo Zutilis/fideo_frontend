@@ -1,0 +1,22 @@
+.addBusinessContainer {
+	position: fixed;
+	padding-inline: var(--padding-page-x);
+	width: 100%;
+	bottom: 4.5rem;
+}
+
+.addBusinessButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	width: 100%;
+	padding: .75rem;
+	color: var(--color-white);
+	background-color: var(--color-blue);
+	border-radius: var(--border-radius-button);
+}
+
+.offers {
+	margin-bottom: calc(4.5rem + .75rem * 2 + 2rem);
+}

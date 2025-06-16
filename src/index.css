@@ -9,6 +9,7 @@
 	--font-weight-bold: 700;
 
 	/* Font sizes */
+	--font-size-xs: .6rem;
 	--font-size-s: .75rem;
 	--font-size-m: .875rem;
 	--font-size-base: 1rem;
@@ -35,7 +36,8 @@
 	--padding-page-y: 1.5rem;
 
 	/* Navbar */
-	--navbar-height: 80px;
+	/* --navbar-height: 80px; */
+	--navbar-height: 60px;
 
 	/* Borders */
 	--border-radius: 15px;

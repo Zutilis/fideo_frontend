@@ -9,7 +9,10 @@ import Nearby from './pages/Nearby/Nearby';
 import Favorites from './pages/Favorites/Favorites';
 import Appointments from './pages/Appointments/Appointments';
 import AppointmentsHistory from './pages/AppointmentsHistory/AppointmentsHistory';
+import BusinessCreate from './pages/BusinessCreate/BusinessCreate';
 import Business from './pages/Business/Business';
+import MyBusinesses from './pages/MyBusinesses/MyBusinesses';
+import OfferCreate from './pages/OfferCreate/OfferCreate';
 
 import PrivateRoute from './routes/PrivateRoute';
 import { AuthProvider } from './context/AuthContext';
@@ -58,9 +61,27 @@ const App = () => {
             </PrivateRoute>
           } />
 
-          <Route path="/business" element={
+          <Route path="/my-businesses" element={
+            <PrivateRoute>
+              <Layout><MyBusinesses /></Layout>
+            </PrivateRoute>
+          } />
+
+          <Route path="/business/:id" element={
             <PrivateRoute>
               <Business />
+            </PrivateRoute>
+          } />
+
+          <Route path="/business/create" element={
+            <PrivateRoute>
+              <BusinessCreate />
+            </PrivateRoute>
+          } />
+
+          <Route path="/business/:id/offers/create" element={
+            <PrivateRoute>
+              <OfferCreate />
             </PrivateRoute>
           } />
         </Routes>

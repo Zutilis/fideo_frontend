@@ -34,6 +34,7 @@ const Login: React.FC = () => {
 			<form onSubmit={handleSubmit} className={styles.form}>
 				<h1>Se connecter</h1>
 				{error && <p className="text-red-500 mb-2">{error}</p>}
+				
 				<div className={styles.inputsWrapper}>
 					<div className={styles.inputWrapper}>
 						<label htmlFor="email" className='subTitle'>Email</label>

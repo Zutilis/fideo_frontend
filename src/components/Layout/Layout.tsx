@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Home, Search, FileText, User } from 'lucide-react';
+import { Home, Search, FileText, User, Plus, Store } from 'lucide-react';
 import MobileNavbar from '../MobileNavbar/MobileNavbar';
 
 interface LayoutProps {
@@ -23,7 +23,12 @@ const Layout: React.FC<LayoutProps> = ({ children, showNavbar = true }) => {
 			onClick: () => navigate('/browse') 
 		},
 		{ 
-			label: 'Rendez-vous', icon: <FileText />, 
+			label: 'Mes commerces', icon: <Store />, 
+			isActive: location.pathname === '/my-businesses', 
+			onClick: () => navigate('/my-businesses')
+		},
+		{ 
+			label: 'Mes Rendez-vous', icon: <FileText />, 
 			isActive: location.pathname === '/appointments', 
 			onClick: () => navigate('/appointments') 
 		},

@@ -23,7 +23,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ items }) => {
 					onClick={item.onClick}
 				>
 					<div className={styles.icon}>{item.icon}</div>
-					<p className={styles.label}>{item.label}</p>
+					{/* <p className={styles.label}>{item.label}</p> */}
 				</button>
 			))}
 		</nav>

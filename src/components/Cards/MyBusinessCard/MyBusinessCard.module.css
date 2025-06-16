@@ -1,0 +1,10 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: .5rem;
+	color: var(--color-white);
+	background-color: var(--color-blue);
+	border-radius: var(--border-radius-button);
+}
